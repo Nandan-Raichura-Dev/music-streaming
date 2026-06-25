@@ -1,0 +1,528 @@
+
+ body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sideBar{
+    background-color: #000;
+    width: 330px;
+    border-radius: 1rem ;/* rem 16 px */
+
+}
+
+
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 5rem 1.5rem; /* changed bottom from 0 to 5rem */
+}
+
+.music-player{
+    background-color: black ;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 72px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem ;
+}
+
+.nav-option{
+    line-height: 45px;
+    opacity: 0.7;
+    padding: 0.1rem 0.75rem;
+
+}
+
+.nav-option:hover{
+    line-height: 45px;
+    opacity: 1;
+
+}
+
+.nav-option i {font-size: 1.25 rem;}
+
+.nav-option a{
+    font-size: 1rem ;
+    margin-left: 1rem;
+}
+
+.lib{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.7rem;
+    padding: 0.5rem 0.75rem ;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-options img{
+    height: 1.25rem;
+    width: 1.25rem ;/* size of the all icon should be same */
+}
+
+.icons{
+    font-size: 1.25 rem;
+    display: flex;
+    opacity: 0.7;
+}
+
+.icons i{
+      opacity: 0.7;
+      margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box{
+    background-color: #232323 ;
+    height: 8rem;
+    margin: 1rem 0 1.5rem 0;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+
+}
+
+.box1{
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.box2{
+    
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.badge{
+
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.30rem 1rem;
+    font-weight: 700;
+    margin-top: 0.7rem;
+    height: 2rem;
+    width: fit-content ;
+    
+}
+
+.main-content{
+    margin-left: 0.6rem;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0 1rem 0;
+    z-index: 10;
+
+}
+
+.sticky-nav-icons{
+   margin-left: 0.5rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+    
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+
+
+
+}
+
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+    
+}
+
+.card-title{
+    font-weight: 700;
+    
+}
+
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height: 45%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-control{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.player-control-icon{
+    height: 1rem;
+     margin-left: 2rem;
+     opacity: 0.7;
+}
+
+.player-control-icon:hover{
+    height: 1rem;
+     margin-left: 2rem;
+     opacity: 1;
+}
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7rem;
+   
+}
+
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+
+
+}
+
+
+.album{
+    display: flex;
+    align-items: center;
+    
+}
+
+.album-img{
+    height: 4rem;
+    width: 4rem;
+    margin-right: 0.5rem;
+    
+}
+
+.album-container{
+    margin-left: 0.5rem;
+}
+
+.album-container p{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+}
+
+.controls-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.controls-icon {
+    height: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.controls-icon:hover {
+    opacity: 1;
+}
+
+.volume-bar {
+    width: 80px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+/* the dark overlay behind the panel */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+}
+
+/* main panel - starts hidden below screen */
+.now-playing-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #1a1a2e 0%, #121212 100%);
+  z-index: 100;
+  transform: translateY(100%); /* hidden below screen */
+  transition: transform 0.4s ease; /* smooth slide animation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* when this class is added, panel slides up */
+.now-playing-panel.active {
+  transform: translateY(0);
+}
+
+/* down arrow to close the panel */
+.now-playing-close {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.now-playing-close:hover {
+  opacity: 1;
+}
+
+/* center content wrapper */
+.now-playing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;  /* not full width on laptop so it looks good */
+  margin-top: 1rem;
+}
+
+/* big album image */
+.now-playing-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+
+/* song title */
+.now-playing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* artist name */
+.now-playing-artist {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+}
+
+/* progress bar row */
+.now-playing-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.now-progress-bar {
+  flex: 1;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.now-progress-bar::-webkit-slider-runnable-track {
+  background-color: #555;
+  border-radius: 100px;
+  height: 0.25rem;
+}
+
+.now-progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+.now-curr-time,
+.now-total-time {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* controls row - shuffle prev play next repeat */
+.now-playing-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.now-control-icon {
+  font-size: 1.3rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.now-control-icon:hover {
+  opacity: 1;
+}
+
+/* big play pause button in center */
+.now-play-btn {
+  font-size: 3.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.now-play-btn:hover {
+  transform: scale(1.05);
+}
+
+/* active state for shuffle and repeat */
+.now-control-icon.active {
+  color: #1bd760;
+  opacity: 1;
+}
+
+
+
+
+
