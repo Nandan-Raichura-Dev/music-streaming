@@ -11,21 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // now playing panel elements
   const nowPlayingPanel = document.getElementById("nowPlayingPanel");
-  const closePanel = document.getElementById("closePanel");
-  const overlay = document.getElementById("overlay");
+    const closePanel = document.getElementById("closePanel");
+    const overlay = document.getElementById("overlay");
   const nowPlayingImg = document.getElementById("nowPlayingImg");
   const nowPlayingTitle = document.getElementById("nowPlayingTitle");
   const nowPlayBtn = document.getElementById("nowPlayBtn");
   const nowProgressBar = document.getElementById("nowProgressBar");
   const nowCurrTime = document.getElementById("nowCurrTime");
   const nowShuffle = document.getElementById("nowShuffle");
-  const nowRepeat = document.getElementById("nowRepeat");
+   const nowRepeat = document.getElementById("nowRepeat");
 
   let isPlaying = false;
   let timerInterval = null;
-  let totalSeconds = 213;
+     let totalSeconds = 213;
   let currentSeconds = 0;
-  let isShuffleOn = false;
+   let isShuffleOn = false;
   let isRepeatOn = false;
 
   // converts seconds to mm:ss
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function startTimer() {
     timerInterval = setInterval(function () {
-      if (currentSeconds >= totalSeconds) {
+    if (currentSeconds >= totalSeconds) {
         clearInterval(timerInterval);
         isPlaying = false;
         currentSeconds = 0;
@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // this handles play pause for both buttons
   function togglePlay() {
     if (isPlaying) {
-      clearInterval(timerInterval);
+    clearInterval(timerInterval);
       isPlaying = false;
       playBtn.src = "./assets/player_icon3.png";
       nowPlayBtn.className = "fa-solid fa-circle-play now-play-btn";
-    } else {
+    }else {
       startTimer();
       isPlaying = true;
       playBtn.src = "./assets/pause_icon.png";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   playBtn.addEventListener("click", togglePlay);
 
   // big panel play button
-  nowPlayBtn.addEventListener("click", togglePlay);
+nowPlayBtn.addEventListener("click", togglePlay);
 
   // small player progress bar drag
   progressBar.addEventListener("input", function () {
@@ -91,20 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // big panel progress bar drag
   nowProgressBar.addEventListener("input", function () {
-    currentSeconds = Math.floor((nowProgressBar.value / 100) * totalSeconds);
+     currentSeconds = Math.floor((nowProgressBar.value / 100) * totalSeconds);
     updateBothBars();
   });
 
   // volume slider
   volumeBar.addEventListener("input", function () {
-    if (volumeBar.value == 0) {
+  if (volumeBar.value == 0) {
       console.log("muted");
     }
   });
 
   // shuffle toggle
   nowShuffle.addEventListener("click", function () {
-    isShuffleOn = !isShuffleOn;
+     isShuffleOn = !isShuffleOn;
     // toggle green color
     if (isShuffleOn) {
       nowShuffle.classList.add("active");
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // repeat toggle
-  nowRepeat.addEventListener("click", function () {
+ nowRepeat.addEventListener("click", function () {
     isRepeatOn = !isRepeatOn;
     if (isRepeatOn) {
       nowRepeat.classList.add("active");
@@ -125,9 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // open the now playing panel
   function openPanel(imgSrc, title) {
-    nowPlayingImg.src = imgSrc;
+     nowPlayingImg.src = imgSrc;
     nowPlayingTitle.textContent = title;
-    nowPlayingPanel.classList.add("active");
+     nowPlayingPanel.classList.add("active");
     overlay.style.display = "block";
   }
 
@@ -138,13 +138,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // down arrow closes it
-  closePanel.addEventListener("click", closeNowPlaying);
+   closePanel.addEventListener("click", closeNowPlaying);
 
   // clicking overlay also closes it
   overlay.addEventListener("click", closeNowPlaying);
 
   // space bar play pause
-  document.addEventListener("keydown", function (e) {
+   document.addEventListener("keydown", function (e) {
     if (e.code === "Space") {
       e.preventDefault();
       togglePlay();
