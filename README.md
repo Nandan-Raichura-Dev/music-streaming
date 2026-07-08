@@ -2,6 +2,10 @@
 
 A Spotify-inspired UI clone built using HTML, CSS, and JavaScript. This project is mainly focused on the front-end design, while JavaScript is used only for a few basic functionalities.
 
+## Live Link
+
+https://nandan-raichura.github.io/Spotify-clone/
+
 ## Features
 
 - Clean and modern Spotify-like interface
