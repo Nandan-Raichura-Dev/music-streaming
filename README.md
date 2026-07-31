@@ -4,6 +4,7 @@ A Spotify-inspired UI clone built using HTML, CSS, and JavaScript. This project 
 
 ## Live Link
 
+https://nandan-raichura-dev.github.io/music-streaming/
 
 
 ## Features
